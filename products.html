@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <link rel="icon" href="./assets/QDIT favicon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QDIT Labs provides quantum-safe cybersecurity solutions including Quantum Key Distribution (QKD) and Quantum Random Number Generators (QRNG) for defense, telecom, and enterprise infrastructure.">
+    <meta name="keywords" content="quantum security, QKD, QRNG, post-quantum cryptography, cybersecurity">
+    <meta name="author" content="QDIT Labs">
+    <meta property="og:title" content="QDIT Labs | Quantum-Safe Cybersecurity Solutions">
+    <meta property="og:description" content="Enterprise-grade quantum security solutions for the post-quantum era.">
+    <meta property="og:type" content="website">
+    <title>QDIT Labs | Enterprise Quantum-Safe Cybersecurity Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        /* Refined color palette */
+        .qd-primary {
+            background-color: #F5F5F5; /* Light grey */
+            color: #1A1A1A;
+        }
+        .qd-secondary {
+            background-color: #1A1A1A; /* Dark grey/black */
+            color: #F5F5F5;
+        }
+        .qd-accent {
+            background-color: #FFD700; /* Gold/Yellow */
+            color: #1A1A1A;
+        }
+        .qd-light-bg {
+            background-color: #FAFAFA; /* Very light grey */
+        }
+        .qd-dark-bg {
+            background-color: #1A1A1A; /* Dark grey/black */
+        }
+        .qd-gradient-bg {
+            background: linear-gradient(135deg, #FAFAFA 0%, #E0E0E0 50%, #FFD700 100%);
+        }
+        
+        /* Hover effects */
+        .qd-hover:hover {
+            background-color: #FFD700;
+            color: #1A1A1A;
+            transition: all 0.3s ease;
+        }
+        
+        /* Animation styles */
+        @keyframes quantum-pulse {
+            0%, 100% {
+                box-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+            }
+        }
+        
+        .quantum-pattern {
+            background-color: #FAFAFA;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(26, 26, 26, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(26, 26, 26, 0.03) 0%, transparent 20%);
+        }
+        
+        .animate-quantum-fade {
+            animation: fadeIn 1.5s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Refined section styling */
+        .section-light {
+            background-color: #FAFAFA;
+            color: #333333;
+        }
+        
+        .section-dark {
+            background-color: #1A1A1A;
+            color: #F5F5F5;
+        }
+        
+        /* Button styles */
+        .qd-button {
+            background-color: #FFD700;
+            color: #1A1A1A;
+            transition: all 0.3s ease;
+        }
+        
+        .qd-button:hover {
+            background-color: #E6C300;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .qd-button-outline {
+            border: 2px solid #FFD700;
+            color: #FFD700;
+            background: transparent;
+        }
+        
+        .qd-button-outline:hover {
+            background-color: #FFD700;
+            color: #1A1A1A;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="quantum-pattern overflow-x-hidden">
+    <div id="header-placeholder"></div>
+
+    <section class="relative min-h-[50vh] flex items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <img src="./assets/data-center-commercial.webp" 
+             alt="Commercial Data Center" 
+             class="absolute inset-0 w-full h-full object-cover brightness-75 opacity-80 z-0" 
+             loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-br from-black/70 to-yellow-900/60 z-0"></div>
+        <div class="max-w-7xl mx-auto text-center relative z-10" data-aos="fade-up" data-aos-duration="800">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white" data-aos="fade-up" data-aos-delay="100">
+                Quantum Security for Your Business
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                Future-proof your data, protect your customers, and ensure business continuity against the looming quantum threat.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up" data-aos-delay="300">
+                <a href="#qkd" class="px-6 py-3 rounded-md qd-button text-black font-medium hover:bg-yellow-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                    Explore QKD Solutions
+                </a>
+                <a href="#qrng" class="px-6 py-3 rounded-md qd-button-outline text-white font-medium hover:bg-yellow-600 hover:text-black transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                    Discover QRNG Technology
+                </a>
+                <a href="#pqc" class="px-6 py-3 rounded-md qd-button text-black font-medium hover:bg-yellow-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                    Explore PQC Solutions
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+            <svg class="animate-bounce w-6 h-6 text-white opacity-70" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Quantum Security for the Post-Quantum Era</h2>
+                <p class="text-gray-600 max-w-4xl mx-auto">
+                    QDIT Labs develops cutting-edge quantum security products that leverage the fundamental principles of quantum physics to provide cryptographic solutions that are secure against both classical and quantum computing attacks. Our product line is designed to meet the stringent security requirements of enterprise, financial, and critical infrastructure sectors.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 items-stretch">
+            
+                <div id="qkd" class="card-hover-effect bg-white border border-gray-200 rounded-xl p-8 shadow-lg flex flex-col h-full">
+                    <div class="w-20 h-20 rounded-lg bg-opacity-20 flex items-center justify-center mb-6 bg-yellow-500 mx-auto">
+                        <i class="fas fa-shield-alt text-3xl text-black"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-center text-gray-900 mb-4">Quantum Key Distribution</h2>
+                    <div class="prose prose-lg text-gray-600 mb-6 flex-grow">
+                        <p>Our QKD systems secure **inter-data-center links**, **financial network backbones**, and intellectual property in transit, providing information-theoretic security guaranteed by the laws of physics.</p>
+                        
+                        <h3 class="text-xl font-semibold mt-6 text-gray-800">Key Benefits:</h3>
+                        <div class="mt-4 grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="font-medium">Protocol:</p>
+                                <p class="text-sm text-gray-500">COW & DPS</p>
+                            </div>
+                            <div>
+                                <p class="font-medium">Wavelength:</p>
+                                <p class="text-sm text-gray-500">1550 nm</p>
+                            </div>
+                            <div>
+                                <p class="font-medium">Key Rate:</p>
+                                <p class="text-sm text-gray-500">Up to 1 kbps</p>
+                            </div>
+                            <div>
+                                <p class="font-medium">Range:</p>
+                                <p class="text-sm text-gray-500">>100 km</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-auto">
+                        <a href="qkd.html" class="inline-flex items-center text-yellow-600 font-medium">
+                            View QKD Details
+                            <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="pqc" class="card-hover-effect bg-white border border-gray-200 rounded-xl p-8 shadow-lg flex flex-col h-full">
+                    <div class="w-20 h-20 rounded-lg bg-opacity-20 flex items-center justify-center mb-6 bg-yellow-500 mx-auto">
+                        <i class="fas fa-cubes text-3xl text-black"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-center text-gray-900 mb-4">Post-Quantum Cryptography</h2>
+                    <div class="prose prose-lg text-gray-600 mb-6 flex-grow">
+                        <p>Our PQC solutions use **quantum-resistant algorithms** to safeguard your sensitive data against both current and future threats, ensuring long-term confidentiality and integrity.</p>
+                        
+                        <h3 class="text-xl font-semibold mt-6 text-gray-800">Key Benefits:</h3>
+                        <div class="mt-4 grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="font-medium">Algorithms:</p>
+                                <p class="text-sm text-gray-500">Kyber, Dilithium</p>
+                            </div>
+                            <div>
+                                <p class="font-medium">Standards:</p>
+                                <p class="text-sm text-gray-500">NIST Finalist</p>
+                            </div>
+                            <div>
+                                <p class="font-medium">Deployment:</p>
+                                <p class="text-sm text-gray-500">Hybrid-compatible</p>
+                            </div>
+                            <div>
+                                <p class="font-medium">Integration:</p>
+                                <p class="text-sm text-gray-500">Software-based</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-auto">
+                        <a href="pqc.html" class="inline-flex items-center text-yellow-600 font-medium">
+                            View PQC Solutions
+                            <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="qrng" class="card-hover-effect bg-white border border-gray-200 rounded-xl p-8 shadow-lg flex flex-col h-full">
+                    <div class="w-20 h-20 rounded-lg bg-opacity-20 flex items-center justify-center mb-6 bg-yellow-500 mx-auto">
+                        <i class="fas fa-cogs text-3xl text-black"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-center text-gray-900 mb-4">Quantum Random Number Generator</h2>
+                    <div class="prose prose-lg text-gray-600 mb-6 flex-grow">
+                        <p>Our QRNG provides the **gold standard for cryptographic keys**, ensuring perfect unpredictability vital for financial transactions, gaming, and secure communications.</p>
+                        
+                        <h3 class="text-xl font-semibold mt-6 text-gray-800">Key Benefits:</h3>
+                        <div class="mt-4 grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="font-medium">Entropy Source:</p>
+                                <p class="text-sm text-gray-500">Quantum vacuum</p>
+                            </div>
+                            <div>
+                                <p class="font-medium">Output Rate:</p>
+                                <p class="text-sm text-gray-500">Multi-Gbps</p>
+                            </div>
+                            <div>
+                                <p class="font-medium">Entropy:</p>
+                                <p class="text-sm text-gray-500">>95% per bit</p>
+                            </div>
+                            <div>
+                                <p class="font-medium">Use Cases:</p>
+                                <p class="text-sm text-gray-500">Financial models, gaming</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-auto">
+                        <a href="qrng.html" class="inline-flex items-center text-yellow-600 font-medium">
+                            View QRNG Details
+                            <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div id="qkd-details" class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up">
+                <div class="md:flex">
+                    <div class="md:w-1/3 bg-gradient-to-b from-yellow-500 to-yellow-600 p-8 flex flex-col justify-center">
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold text-black mb-4">Quantum Key Distribution</h3>
+                            <div class="w-24 h-1 bg-gray-800 mx-auto mb-6"></div>
+                            <ul class="space-y-4 text-black">
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-gray-800 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Business continuity</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-gray-800 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Unconditional security</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-gray-800 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Real-time threat detection</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Securing Your Digital Supply Chain</h4>
+                        <p class="text-gray-600 mb-6">
+                            Our QKD solutions are designed to protect the most sensitive data transmissions in the corporate world. From financial institutions securing high-frequency trading data to healthcare providers protecting patient records across data centers, QKD ensures your most valuable assets are never compromised.
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-8 mb-8">
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-3">Key Benefits</h5>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Protects data in motion between data centers</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Enables secure remote access and cloud connectivity</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Guarantees compliance with future security regulations</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-3">Use Cases</h5>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Financial network backbones</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Inter-data-center links</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Protecting intellectual property in transit</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="pqc-details" class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up">
+                <div class="md:flex flex-row-reverse">
+                    <div class="md:w-1/3 bg-gradient-to-b from-yellow-500 to-yellow-600 p-8 flex flex-col justify-center">
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold text-black mb-4">Post-Quantum Cryptography</h3>
+                            <div class="w-24 h-1 bg-gray-800 mx-auto mb-6"></div>
+                            <ul class="space-y-4 text-black">
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-gray-800 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Software-based integration</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-gray-800 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Compliance-ready framework</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-gray-800 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Future-proof without overhaul</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Future-Proofing Your Existing Infrastructure</h4>
+                        <p class="text-gray-600 mb-6">
+                            PQC offers a cost-effective, software-based solution to achieve quantum resilience without a massive hardware overhaul. By integrating NIST-selected algorithms, our PQC framework ensures your applications, data stores, and communications remain secure for the long term, protecting your intellectual property and customer data from "harvest now, decrypt later" attacks.
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-8 mb-8">
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-3">Key Benefits</h5>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Seamless deployment with existing systems</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Protects proprietary data and business secrets</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Reduces long-term risk and liability</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-3">Use Cases</h5>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Cloud services and SaaS platforms</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Enterprise data stores and databases</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Secure enterprise communications (email, VPN)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="qrng-details" class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up">
+                <div class="md:flex">
+                    <div class="md:w-1/3 bg-gradient-to-b from-yellow-500 to-yellow-600 p-8 flex flex-col justify-center">
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold text-black mb-4">Quantum Random Number Generator</h3>
+                            <div class="w-24 h-1 bg-gray-800 mx-auto mb-6"></div>
+                            <ul class="space-y-4 text-black">
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-gray-800 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Gold-standard for entropy</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-gray-800 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>High-speed generation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-gray-800 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Business integrity</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Ensuring Integrity and Trust in Your Data</h4>
+                        <p class="text-gray-600 mb-6">
+                            Our QRNG provides truly unpredictable random numbers, which are the bedrock of secure encryption. For industries where trust is non-negotiable—from generating cryptographic keys for financial trading to ensuring fair outcomes in online gaming—our QRNG guarantees the integrity of your systems at the most fundamental level.
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-8 mb-8">
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-3">Key Benefits</h5>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Protects against predictability-based attacks</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Provides provable entropy for all cryptographic needs</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>High-speed generation for scalable applications</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-3">Use Cases</h5>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Cryptographic key and token generation</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Secure financial models and trading algorithms</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-yellow-600 mr-2">•</span>
+                                        <span>Online gaming and random-selection systems</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-yellow-500 mb-4">The QDIT Labs Advantage: Quantifiable Value</h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+                Our quantum security solutions are not just an expense; they're a strategic investment with a measurable return.
+            </p>
+            <div class="grid md:grid-cols-3 gap-12 text-left">
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-yellow-500 transition-colors duration-300" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chart-line text-4xl text-yellow-500 mr-4"></i>
+                        <h3 class="text-2xl font-bold">Future-Proofing Value</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        A single quantum-safe encryption upgrade protects your data for decades, **eliminating the high costs and risks of multiple security overhauls**.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2 text-sm">
+                        <li>Avoid repeated capital expenditures</li>
+                        <li>Reduce long-term operational and maintenance costs</li>
+                        <li>Secure your data beyond the life of today's technology</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-yellow-500 transition-colors duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-file-contract text-4xl text-yellow-500 mr-4"></i>
+                        <h3 class="text-2xl font-bold">Compliance & Risk Mitigation</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Proactively meet evolving regulatory standards like GDPR and CCPA, **avoiding millions in potential fines and severe reputational damage** from data breaches.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2 text-sm">
+                        <li>Stay ahead of mandatory quantum-safe mandates</li>
+                        <li>Protect against data breach penalties and legal action</li>
+                        <li>Build and maintain customer trust and loyalty</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-yellow-500 transition-colors duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cogs text-4xl text-yellow-500 mr-4"></i>
+                        <h3 class="text-2xl font-bold">Operational Efficiency</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Our solutions seamlessly integrate with your existing infrastructure, **reducing deployment time and saving up to 40% on implementation costs** compared to complex hardware-based systems.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2 text-sm">
+                        <li>Minimal disruption to current workflows</li>
+                        <li>Faster time-to-market for new secure services</li>
+                        <li>Lower training and operational overhead</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16">
+                <a href="value.html" class="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-md qd-button hover:bg-yellow-600 md:py-4 md:text-lg md:px-10 transition-all duration-300 hover:scale-105">
+                    See How We Deliver Value
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: false, duration: 800, easing: 'ease-in-out' });
+    </script>
+    <script>
+    (function() {
+        'use strict';
+        
+        // Mobile menu functionality
+        function initializeMobileMenu() {
+            console.log('🔧 Initializing mobile menu...');
+            
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (!menuButton) {
+                console.error('❌ Mobile menu button not found');
+                return;
+            }
+            
+            if (!mobileMenu) {
+                console.error('❌ Mobile menu not found');
+                return;
+            }
+            
+            console.log('✅ Mobile menu elements found');
+            
+            // Remove any existing listeners to prevent duplicates
+            const newButton = menuButton.cloneNode(true);
+            menuButton.parentNode.replaceChild(newButton, menuButton);
+            
+            // Add click listener to toggle menu
+            newButton.addEventListener('click', function(e) {
+                console.log('📱 Menu button clicked');
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const wasHidden = mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden');
+                const isNowHidden = mobileMenu.classList.contains('hidden');
+                
+                console.log(`Menu: ${wasHidden ? 'hidden' : 'visible'} → ${isNowHidden ? 'hidden' : 'visible'}`);
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!mobileMenu.contains(e.target) && !newButton.contains(e.target)) {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        console.log('📱 Closing menu - clicked outside');
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+            
+            console.log('✅ Mobile menu initialized successfully');
+        }
+
+        // Dropdown toggle function
+        window.toggleDropdown = function(menuId) {
+            console.log(`🔽 Toggling dropdown: ${menuId}`);
+            
+            const menu = document.getElementById(`${menuId}-menu`);
+            const arrow = document.getElementById(`${menuId}-arrow`);
+            
+            if (!menu) {
+                console.error(`❌ Dropdown menu not found: ${menuId}-menu`);
+                return;
+            }
+            
+            const wasHidden = menu.classList.contains('hidden');
+            menu.classList.toggle('hidden');
+            
+            if (arrow) {
+                arrow.classList.toggle('rotate-180');
+            } else {
+                console.warn(`⚠️ Arrow not found: ${menuId}-arrow`);
+            }
+            
+            console.log(`Dropdown ${menuId}: ${wasHidden ? 'closed' : 'open'} → ${menu.classList.contains('hidden') ? 'closed' : 'open'}`);
+        };
+        
+        // Initialize when DOM is ready
+        function init() {
+            console.log('🚀 Starting mobile menu initialization...');
+            
+            // Wait a bit for imported content to load
+            setTimeout(() => {
+                initializeMobileMenu();
+            }, 100);
+            
+            // Also try again after a longer delay in case of slow loading
+            setTimeout(() => {
+                if (!document.getElementById('mobile-menu-button')?.onclick) {
+                    console.log('🔄 Retrying mobile menu initialization...');
+                    initializeMobileMenu();
+                }
+            }, 500);
+        }
+        
+        // Start initialization
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+        
+        // Also initialize on window load as backup
+        window.addEventListener('load', function() {
+            setTimeout(init, 200);
+        });
+    })();
+    </script>
+        
+</body>
+</html>
