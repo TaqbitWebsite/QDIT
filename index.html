@@ -110,6 +110,114 @@
             color: #1A1A1A;
         }
     </style>
+     <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --track-duration: 25s;
+}
+
+/* ================= CONTAINER ================= */
+.news-strip {
+  width: 100%;
+  height: 410px;
+  overflow: hidden;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* ================= TRACK ================= */
+.track {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: max-content; /* 🔥 critical for mobile */
+  animation: slide var(--track-duration) linear infinite;
+  will-change: transform;
+}
+
+/* ================= TILE ================= */
+.tile {
+  width: 260px;
+  min-height: 320px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-rows: auto 1fr; /* image + text */
+  
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  flex: 0 0 auto;
+}
+
+
+/* ================= IMAGE ================= */
+.tile img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* ================= CAPTION ================= */
+.caption {
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  background: #fafafa;
+
+  overflow: hidden;      /* no spill */
+}
+
+
+
+/* ================= ANIMATION ================= */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================= HOVER PAUSE ================= */
+.news-strip:hover .track {
+  animation-play-state: paused;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 700px) {
+  :root {
+    --track-duration: 38s; /* smoother on mobile */
+  }
+
+  .news-strip {
+    height: 200px;
+  }
+
+  .tile {
+    width: 180px;
+    min-height: 260px;   /* SAME HEIGHT for all */
+  }
+
+  .tile img {
+    height: 100px;
+  }
+
+  .caption {
+    font-size: 11px;
+    line-height: 1.35;
+    padding: 6px;
+  }
+}
+</style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
