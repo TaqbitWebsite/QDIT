@@ -2,10 +2,10 @@
 <html lang="en" class="scroll-smooth">
 
  <head>
-    <link rel="icon" href="./assets/QDIT favicon.png" type="image/png">
+    <link rel="icon" href="./assets/qdit favicon.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs | QDIT Labs</title>
+    <title>FAQs | Qdit Labs</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -239,13 +239,13 @@
                     <!-- FAQ Item 8 -->
                     <div class="faq-item p-6 rounded-lg" onclick="toggleFAQ(this)">
                         <div class="faq-question flex justify-between items-center">
-                            <h3 class="text-lg font-semibold text-gray-900">Where are QDIT Labs facilities located?</h3>
+                            <h3 class="text-lg font-semibold text-gray-900">Where are Qdit Labs facilities located?</h3>
                             <svg class="faq-toggle w-6 h-6 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
                         </div>
                         <div class="faq-answer mt-4 text-gray-600">
-                            <p>Our main office is located at 47/1, Srirampura, Main Road, Amrutahalli, Jakkuru, Bengaluru, Karnataka – 560001.</p>
+                            <p>Our headquarters and primary research facility are in Zurich, Switzerland. We also have regional offices in Boston, Singapore, and Tel Aviv. Our Quantum Academy training programs are available globally through our online platform, with in-person sessions at our facilities and partner locations worldwide.</p>
                         </div>
                     </div>
                     
@@ -260,8 +260,9 @@
                         <div class="faq-answer mt-4 text-gray-600">
                             <p>Our customer support team is available 24/7 through multiple channels:</p>
                             <ul class="list-disc pl-5 mt-2 space-y-1">
-                                <li>Email: support@qditlabs.com</li>
-                                <li>Phone: +91 8884459524</li>
+                                <li>Email: support@qdietlabs.com</li>
+                                <li>Phone: +1 (800) 555-QUANT (78268)</li>
+                                <li>Live chat via our website</li>
                                 <li>Dedicated support portal for enterprise clients</li>
                             </ul>
                             <p class="mt-2">Average response time is under 2 hours for critical issues.</p>
@@ -450,5 +451,87 @@
             });
         })();
     </script>
+    
+
+<!-- Popup Overlay -->
+<div id="whitepaperPopup"
+     class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-50 transition-all duration-300">
+
+    <div class="relative bg-white rounded-3xl shadow-2xl max-w-md w-[90%] overflow-hidden animate-popup">
+
+        <div class="h-2 bg-gradient-to-r from-yellow-400 to-yellow-500"></div>
+
+        <button onclick="closePopup()"
+                class="absolute top-4 right-5 text-gray-400 hover:text-black text-3xl transition">
+            &times;
+        </button>
+
+        <div class="p-8 text-center">
+
+            <div class="w-20 h-20 mx-auto mb-5 rounded-full flex items-center justify-center shadow-lg
+                        bg-gradient-to-r from-yellow-400 to-yellow-500">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="w-10 h-10 text-black"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor">
+
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+            </div>
+
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                Whitepaper Coming Soon
+            </h2>
+
+            <p class="text-gray-600 leading-relaxed mb-8">
+                We’re currently preparing our Quantum Readiness Whitepaper.
+                Stay tuned for the official release.
+            </p>
+
+            <button onclick="closePopup()"
+                    class="px-7 py-3 rounded-xl text-black font-medium shadow-lg hover:scale-105 transition duration-300
+                           bg-gradient-to-r from-yellow-400 to-yellow-500">
+                Got It
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+function openPopup() {
+    const popup = document.getElementById("whitepaperPopup");
+    popup.classList.remove("hidden");
+    popup.classList.add("flex");
+}
+
+function closePopup() {
+    const popup = document.getElementById("whitepaperPopup");
+    popup.classList.remove("flex");
+    popup.classList.add("hidden");
+}
+</script>
+
+<style>
+@keyframes popupFade {
+    from {
+        opacity: 0;
+        transform: scale(0.85) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.animate-popup {
+    animation: popupFade 0.35s ease;
+}
+</style>
 </body>
 </html>
