@@ -250,11 +250,10 @@
                     Download Whitepaper
                 </a> -->
                 <!-- Button -->
-<a href="#"
+<a href="publications.html"
    class="px-8 py-4 text-black rounded-xl font-medium text-lg shadow-lg hover:scale-105 transition duration-300"
-   style="background: linear-gradient(to right, #FFD700, #FFC300);"
-   onclick="openPopup()">
-   Download Whitepaper
+   style="background: linear-gradient(to right, #FFD700, #FFC300);">
+    Qdit Labs Publications
 </a>
 
 <!-- Popup Overlay -->
@@ -466,15 +465,15 @@ function closePopup() {
    
     <script>
 const tiles = [
-    { img: 'assets/mou_img1.jpeg', title: 'Taqbit Labs is proud to announce the signing of a Memorandum of Understanding (MoU) with the Government of Andhra Pradesh, marking our entry into the state’s bold and rapidly advancing quantum ecosystem.', style: 'object-position: top;' },
-    { img: 'assets/mou_img2.jpeg', title: 'Under the leadership of Shri N. Chandrababu Naidu and Shri Nara Lokesh, Andhra Pradesh is advancing deep technology and building India’s quantum-ready future. We are honored to join this journey.' },
-    { img: 'assets/amravati_workshop1.jpeg', title: 'Animesh Aaryan was featured as a panelist at the Amaravati Quantum Valley Workshop, discussing breakthroughs shaping the quantum future.' },
-    { img: 'assets/bilesh_event.jpg', title: 'Team Taqbit Labs is excited to be exhibiting today at the Amaravati Quantum Valley Workshop 2025 in Vijayawada!' },
-    { img: 'assets/amravati_workshop2.jpeg', title: 'Acknowledged for its quantum tech innovations, Taqbit Labs participated in the Amravati Quantum Valley Workshop panel, offering valuable contributions.' },
-    { img: 'assets/animesh_cll_event2.jpg', title: 'At the CII Quantum Technology Conclave 2026, New Delhi, our CEO Animesh Aaryan, participated in a strategic panel discussion on Quantum-Safe Cybersecurity & Cryptography.' },
-    { img: 'assets/nasc_complex.jpg', title: 'Our CEO, represented Taqbit Labs at this prestigious event held at the NASC Complex, New Delhi. The theme—"Technology, Coordination, and Commitment: Vision for a Secure and Strong India"—resonates deeply with our mission at Taqbit Labs' ,style: 'object-position: 50% 25%; transform: scale(0.95);'},
-    { img: 'assets/ai_summit_animesh.jpg', title: 'Thrilled that our CEO Animesh Aaryan is representing Taqbit Labs at the AI Impact Summit 2026—tackling a huge hurdle for innovators today : 𝐅𝐚𝐢𝐫 𝐚𝐜𝐜𝐞𝐬𝐬 𝐭𝐨 𝐀𝐈 𝐜𝐨𝐦𝐩𝐮𝐭𝐞 𝐚𝐧𝐝 𝐝𝐚𝐭𝐚 𝐫𝐞𝐬𝐨𝐮𝐫𝐜𝐞𝐬.' },
-    { img: 'assets/xdlinx_animesh.jpg', title: 'As the International Year of Quantum (IYQ) 2025 draws to a close, Taqbit Labs is thrilled to announce our MoU with XDLINX Space Labs to pioneer quantum-safe satellite communications.\nThis pioneering collaboration integrates Quantum Key Distribution (QKD) with Post-Quantum Cryptography (PQC) for robust, future-resilient security across space-to-ground links (command & telemetry) and space-to-space links (inter-satellite communications).', style: 'object-position: top;'  }
+    { img: 'assets/mou_img1.jpeg', date: 'Jun 2025', title: 'Taqbit Labs is proud to announce the signing of a Memorandum of Understanding (MoU) with the Government of Andhra Pradesh, marking our entry into the state’s bold and rapidly advancing quantum ecosystem.', style: 'object-position: top;' },
+    { img: 'assets/mou_img2.jpeg', date: 'Jun 2025',title: 'Under the leadership of Shri N. Chandrababu Naidu and Shri Nara Lokesh, Andhra Pradesh is advancing deep technology and building India’s quantum-ready future. We are honored to join this journey.' },
+    { img: 'assets/amravati_workshop1.jpeg',date: 'Jun 2025', title: 'Animesh Aaryan was featured as a panelist at the Amaravati Quantum Valley Workshop, discussing breakthroughs shaping the quantum future.' },
+    { img: 'assets/bilesh_event.jpg', date: 'Jun 2025', title: 'Team Taqbit Labs is excited to be exhibiting today at the Amaravati Quantum Valley Workshop 2025 in Vijayawada!' },
+    { img: 'assets/amravati_workshop2.jpeg', date: ' Jun 2025', title: 'Acknowledged for its quantum tech innovations, Taqbit Labs participated in the Amravati Quantum Valley Workshop panel, offering valuable contributions.' },
+    { img: 'assets/animesh_cll_event2.jpg', date: 'Mar 2026', title: 'At the CII Quantum Technology Conclave 2026, New Delhi, our CEO Animesh Aaryan, participated in a strategic panel discussion on Quantum-Safe Cybersecurity & Cryptography.' },
+    { img: 'assets/nasc_complex.jpg', date: ' Jan 2026', title: 'Our CEO, represented Taqbit Labs at this prestigious event held at the NASC Complex, New Delhi. The theme—"Technology, Coordination, and Commitment: Vision for a Secure and Strong India"—resonates deeply with our mission at Taqbit Labs' ,style: 'object-position: 50% 25%; transform: scale(0.95);'},
+    { img: 'assets/ai_summit_animesh.jpg', date: 'Feb 2026', title: 'Thrilled that our CEO Animesh Aaryan is representing Taqbit Labs at the AI Impact Summit 2026—tackling a huge hurdle for innovators today : 𝐅𝐚𝐢𝐫 𝐚𝐜𝐜𝐞𝐬𝐬 𝐭𝐨 𝐀𝐈 𝐜𝐨𝐦𝐩𝐮𝐭𝐞 𝐚𝐧𝐝 𝐝𝐚𝐭𝐚 𝐫𝐞𝐬𝐨𝐮𝐫𝐜𝐞𝐬.' },
+    { img: 'assets/xdlinx_animesh.jpg', date: ' Feb 2026', title: 'As the International Year of Quantum (IYQ) 2026 concludes, Taqbit Labs is proud to announce its MoU with XDLINX Space Labs to advance quantum-safe satellite communications using QKD and PQC technologies for secure space-to-ground and inter-satellite links.', style: 'object-position: top;'  }
 ];
 
 const container = document.getElementById('news-container');
@@ -485,12 +484,22 @@ tiles.forEach(t => {
     card.className = "bg-white/70 backdrop-blur-xl rounded-2xl overflow-hidden border border-transparent shadow-lg hover:scale-105 hover:border-yellow-500 hover:shadow-[0_0_30px_rgba(239,68,68,0.5)] transition-all duration-500";
     const img = document.createElement('img');
     img.src = t.img;
-   img.className = "max-h-full max-w-full object-contain";
-img.style = t.style || "";
+//    img.className = "max-h-full max-w-full object-contain";
+   img.style = t.style || "";
 
     const cap = document.createElement('div');
    img.className = "w-full h-52 object-cover object-center";
-    cap.textContent = t.title;
+   cap.className = "px-4 py-4";
+    // cap.textContent = t.title;
+   cap.innerHTML = `
+    <div class="space-y-2">
+        <p class="text-sm text-gray-500">${t.date || ''}</p>
+
+        <p class="leading-relaxed text-gray-800">
+            ${t.title}
+        </p>
+    </div>
+`;
 
     card.appendChild(img);
     card.appendChild(cap);
@@ -589,11 +598,15 @@ img.style = t.style || "";
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white bg-opacity-10 border border-gray-700 rounded-xl p-8 shadow-lg backdrop-blur-md hover:bg-opacity-20 hover:shadow-2xl transition transform hover:scale-105"
                      data-aos="fade-up" data-aos-delay="0">
-                    <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6 bg-gradient-to-br from-yellow-500 to-yellow-600 bg-opacity-30">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-1.282-8.455-3.245M19 19v3m-3-3v3m-4-3v3m-4-3v3m-3-3v3m-1-1v3m10-3v3m-4-3v3m-4-3v3m-3-3v3m-1-1v3" />
-                         </svg>
-                    </div>
+                   <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6 bg-gradient-to-br from-yellow-400 to-yellow-500 bg-opacity-30">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                    class="h-8 w-8 text-black-300" fill="none" viewBox="0 0 24 24"stroke="currentColor">
+                    <path stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        stroke-width="2" 
+                        d="M3 21h18M5 21V7a2 2 0 012-2h10a2 2 0 012 2v14M9 9h1m-1 4h1m4-4h1m-1 4h1" />
+                </svg>
+</div>
                     <h3 class="text-xl font-bold text-white mb-3">Business-Focused Solutions</h3>
                     <p class="text-gray-300">We design scalable, integration-friendly solutions that fit your existing infrastructure, not the other way around.</p>
                 </div>
@@ -601,7 +614,7 @@ img.style = t.style || "";
                 <div class="bg-white bg-opacity-10 border border-gray-700 rounded-xl p-8 shadow-lg backdrop-blur-md hover:bg-opacity-20 hover:shadow-2xl transition transform hover:scale-105"
                      data-aos="fade-up" data-aos-delay="100">
                     <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6 bg-gradient-to-br from-yellow-400 to-yellow-500 bg-opacity-30">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>
                     </div>
@@ -612,7 +625,7 @@ img.style = t.style || "";
                 <div class="bg-white bg-opacity-10 border border-gray-700 rounded-xl p-8 shadow-lg backdrop-blur-md hover:bg-opacity-20 hover:shadow-2xl transition transform hover:scale-105"
                      data-aos="fade-up" data-aos-delay="200">
                     <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6 bg-gradient-to-br from-yellow-400 to-yellow-500 bg-opacity-30">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                         </svg>
                     </div>
@@ -708,7 +721,11 @@ img.style = t.style || "";
                             <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
-                            <b>Information-theoretic security</b> for sensitive data
+                                        
+                            <p class="leading-relaxed">
+                            <strong>Information-theoretic security</strong>
+                              for sensitive data
+                        </p>
                         </li>
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -731,27 +748,35 @@ img.style = t.style || "";
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Post-Quantum Cryptography (PQC)</h3>
-                    <p class="text-gray-600 leading-relaxed mb-4">
-                        A software-based solution to <b>future-proof your existing applications and data stores</b> without a hardware overhaul, ensuring compliance and business continuity.
+                    <p class="text-gray-600 leading-relaxed mb-5">
+                        A software-based solution to <strong>future-proof your existing applications and data stores</strong> without a hardware overhaul, ensuring compliance and business continuity.
                     </p>
                     <ul class="space-y-2 text-gray-600 text-sm">
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <li class="flex items-start gap-3">
+                            <svg class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
-                            <b>Quantum-resistant algorithms</b> like Kyber and Dilithium
+                             <p class="leading-relaxed">
+                <strong>Quantum-resistant algorithms</strong>
+                like Kyber and Dilithium
+            </p>
                         </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <li class="flex items-start gap-3">
+                            <svg class="h-5 w-5 text-green-500  mt-0.5  flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
-                            Ideal for secure apps, cloud services, and enterprise data
+                            <p class="leading-relaxed">
+                Ideal for secure apps, cloud services, and enterprise data
+            </p>
                         </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <li class="flex items-start gap-3">
+                            <svg class="h-5 w-5 text-green-500  mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
-                            <b>Hybrid-compatible</b> for a seamless, phased migration
+                               <p class="leading-relaxed">
+                <strong>Hybrid-compatible</strong>
+                for a seamless, phased migration
+            </p>
                         </li>
                     </ul>
                 </div>
@@ -759,7 +784,7 @@ img.style = t.style || "";
                 <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg hover:border-purple-400 transition-all duration-300">
                     <div class="w-14 h-14 rounded-lg bg-purple-50 flex items-center justify-center mb-6 border border-purple-200">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  d="M5 5h2v2H5V5zm0 6h2v2H5v-2zm0 6h2v2H5v-2zm6-12h2v2h-2V5zm0 6h2v2h-2v-2zm0 6h2v2h-2v-2zm6-12h2v2h-2V5zm0 6h2v2h-2v-2zm0 6h2v2h-2v-2z"/>
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Quantum Random Number Generator (QRNG)</h3>
